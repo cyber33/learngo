@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 func nope() { // block scope starts
 
 	// hello and ok are only visible here
@@ -20,8 +22,11 @@ func nope() { // block scope starts
 func main() { // block scope starts
 
 	// hello and ok are not visible here
+	// even if I call the function, they are still locked in the scope
+	// of that function
+	nope()
 
 	// ERROR:
-	// fmt.Println(hello, ok)
+	fmt.Println(hello, ok)
 
 } // block scope ends
