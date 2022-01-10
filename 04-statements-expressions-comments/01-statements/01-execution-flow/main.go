@@ -20,4 +20,7 @@ func main() {
 	if 5 > 1 {
 		fmt.Println("bigger")
 	}
+	if 1 > 5 {
+		fmt.Println("and smaller... oh no not really")
+	}
 }
