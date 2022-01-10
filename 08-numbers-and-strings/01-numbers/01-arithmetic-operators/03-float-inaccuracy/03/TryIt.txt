@@ -1,0 +1,5 @@
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:62204 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\08-numbers-and-strings\01-numbers\01-arithmetic-operators\03-float-inaccuracy\03
+DAP server listening at: 127.0.0.1:62204
+1.500000
+Process 8000 has exited with status 0
+dlv dap (6980) exited with code: 0

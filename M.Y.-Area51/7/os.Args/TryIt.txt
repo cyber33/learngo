@@ -1,0 +1,78 @@
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> dir
+
+
+    Directory: C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/20/2021   6:49 PM             95 greeter.go
+
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> type .\greeter.go
+package main
+
+        "fmt"
+        "os"
+)
+
+func main() {
+        fmt.Printf("%#v\n", os.Args)
+}
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> go mod init cyber33.com/greeter
+go: creating new go.mod: module cyber33.com/greeter
+go: to add module requirements and sums:
+        go mod tidy
+
+
+    Directory: C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args
+
+----                 -------------         ------ ----
+-a----        11/20/2021   8:47 PM             36 go.mod
+-a----        11/20/2021   6:49 PM             95 greeter.go
+
+
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> type go.mod
+module cyber33.com/greeter
+
+go 1.17
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> go run .
+[]string{"C:\\Users\\mark_\\AppData\\Local\\Temp\\go-build4291669520\\b001\\exe\\greeter.exe"}
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> dir
+
+    Directory: C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/20/2021   8:47 PM             36 go.mod
+
+exe\\greeter.exe
+dir : Cannot find path 'C:\Users\mark_\AppData\Local\Temp\go-build4291669520\b001\exe\greeter.exe' because it does not exist.
+At line:1 char:1
++ dir C:\\Users\\mark_\\AppData\\Local\\Temp\\go-build4291669520\\b001\ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\mark_\...exe\greeter.exe:String) [Get-ChildItem], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetChildItemCommand
+ 
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> go run .
+[]string{"C:\\Users\\mark_\\AppData\\Local\\Temp\\go-build1027252159\\b001\\exe\\greeter.exe"}
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> go build -o greeter.exe
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> dir
+
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/20/2021   8:47 PM             36 go.mod
+-a----        11/20/2021   8:49 PM        1938432 greeter.exe
+-a----        11/20/2021   6:49 PM             95 greeter.go
+
+
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> .\greeter.exe
+[]string{"C:\\Users\\mark_\\Data\\Google\\Interview Prep\\Golang\\learngo\\M.Y.-Area51\\7\\os.Args\\greeter.exe"}
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> go run .     
+[]string{"C:\\Users\\mark_\\AppData\\Local\\Temp\\go-build2292109798\\b001\\exe\\greeter.exe"}
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> 
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> .\greeter.exe hi hellow hey
+[]string{"C:\\Users\\mark_\\Data\\Google\\Interview Prep\\Golang\\learngo\\M.Y.-Area51\\7\\os.Args\\greeter.exe", "hi", "hellow", "hey"}
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\M.Y.-Area51\7\os.Args> 

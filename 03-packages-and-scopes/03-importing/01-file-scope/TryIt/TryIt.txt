@@ -1,0 +1,252 @@
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/20/2021  10:09 AM    <DIR>          01-file-scope
+11/20/2021  10:09 AM    <DIR>          02-renaming
+               0 File(s)              0 bytes
+               4 Dir(s)   9,295,527,936 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing>cd 01-file-scope
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/20/2021  10:09 AM               596 bye.go
+11/20/2021  10:09 AM               390 main.go
+               2 File(s)            986 bytes
+               2 Dir(s)   9,295,417,344 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope>mkdir TryIt
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope>go run main.go bye.go
+Hello!
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        fmt.Println("Hello!")
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope>type bye.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+// Uncomment below code to see the error
+// (Just remove the // characters for all 3 lines below)
+
+// This file cannot see main.go's imported names ("fmt").
+// Because the imported names belong to file scope.
+
+// func bye() {
+//      fmt.Println("Bye!")
+// }
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope>go run bye.go
+# command-line-arguments
+runtime.main_main·f: function main is undeclared in the main package
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope>cd TryIt
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>copy *.go .
+*.go
+The system cannot find the file specified.
+        0 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>copy ..\*.go .
+..\bye.go
+..\main.go
+        2 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        fmt.Println("Hello!")
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>type bye.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+// Uncomment below code to see the error
+// (Just remove the // characters for all 3 lines below)
+
+// This file cannot see main.go's imported names ("fmt").
+// Because the imported names belong to file scope.
+
+// func bye() {
+//      fmt.Println("Bye!")
+// }
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>go run main.go
+Hello!
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>go run bye.go
+# command-line-arguments
+runtime.main_main·f: function main is undeclared in the main package
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>notepad bye.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>type bye.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+// Uncomment below code to see the error
+// (Just remove the // characters for all 3 lines below)
+
+// This file cannot see main.go's imported names ("fmt").
+// Because the imported names belong to file scope.
+
+func bye() {
+        fmt.Println("Bye!")
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>go run bye.go
+# command-line-arguments
+.\bye.go:18:2: undefined: fmt
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>notepad bye.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>type bye.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+// Uncomment below code to see the error
+// (Just remove the // characters for all 3 lines below)
+
+import "fmt"
+
+// This file cannot see main.go's imported names ("fmt").
+// Because the imported names belong to file scope.
+
+func bye() {
+        fmt.Println("Bye!")
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>go run bye.go
+# command-line-arguments
+runtime.main_main·f: function main is undeclared in the main package
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt
+
+12/14/2021  08:52 PM    <DIR>          .
+12/14/2021  08:52 PM    <DIR>          ..
+12/14/2021  08:55 PM               603 bye.go
+11/20/2021  10:09 AM               390 main.go
+               2 File(s)            993 bytes
+               2 Dir(s)   9,298,792,448 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>type bye.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+// Uncomment below code to see the error
+// (Just remove the // characters for all 3 lines below)
+
+import "fmt"
+
+// This file cannot see main.go's imported names ("fmt").
+// Because the imported names belong to file scope.
+
+func bye() {
+        fmt.Println("Bye!")
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>notepad bye.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>type bye.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+// Uncomment below code to see the error
+// (Just remove the // characters for all 3 lines below)
+
+// This file cannot see main.go's imported names ("fmt").
+// Because the imported names belong to file scope.
+
+func bye() {
+        fmt.Println("Bye!")
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>go run main.go bye.go
+# command-line-arguments
+.\bye.go:18:2: undefined: fmt
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\03-importing\01-file-scope\TryIt>

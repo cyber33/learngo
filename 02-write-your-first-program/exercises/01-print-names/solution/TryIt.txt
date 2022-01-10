@@ -1,0 +1,40 @@
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names> cd .\solution\
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names\solution> go build .\main.go
+
+
+
+
+----                 -------------         ------ ----
+-a----        11/20/2021  10:07 PM        1927168 main.exe
+-a----        11/20/2021  10:09 AM            465 main.go
+
+
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names\solution> .\main.exe
+Nikola
+Thomas
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names\solution> go run .
+Nikola
+Thomas
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names\solution> type .\main.go 
+// Copyright Â© 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+// go run main.go
+
+// go build
+// ./solution
+
+func main() {
+        fmt.Println("Nikola")
+        fmt.Println("Thomas")
+}
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names\solution> 

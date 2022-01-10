@@ -1,0 +1,101 @@
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --listen=127.0.0.1:56481 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names
+DAP server listening at: 127.0.0.1:56481
+Mark Yoshikawa
+Laura Yoshikawa
+Process 17292 has exited with status 0
+dlv dap (14084) exited with code: 0
+
+
+
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo> cd .\02-write-your-first-program\exercises\01-print-names\
+
+
+    Directory: C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/20/2021  10:09 AM                solution
+-a----        11/20/2021   9:52 PM            819 main.go
+
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names> ls solution
+
+
+    Directory: C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names\solution
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        11/20/2021  10:09 AM            465 main.go
+
+
+
+
+    Directory: C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        11/20/2021  10:09 AM                solution
+-a----        11/20/2021   9:52 PM            819 main.go
+
+
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names> type main.go
+// Copyright Â© 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+// ---------------------------------------------------------
+// EXERCISE: Print names
+//
+//  Print your name and your best friend's name using
+//  Println twice
+//
+// EXPECTED OUTPUT
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names> type main.go
+// Copyright Â© 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/  
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+// ---------------------------------------------------------
+// EXERCISE: Print names
+//
+//  Print your name and your best friend's name using
+//  Println twice
+//
+// EXPECTED OUTPUT
+//  YourName
+//  YourBestFriendName
+// BONUS
+//  Use `go run` first.
+
+func main() {
+        //?
+        fmt.Println("Mark Yoshikawa")
+        //?
+        fmt.Println("Laura Yoshikawa")
+}
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names> go run .
+Mark Yoshikawa
+Laura Yoshikawa
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names> go build -o print-names.exe
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names> .\print-names.exe
+Mark Yoshikawa
+Laura Yoshikawa
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\02-write-your-first-program\exercises\01-print-names>

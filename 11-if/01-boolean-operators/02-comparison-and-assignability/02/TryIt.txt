@@ -1,0 +1,111 @@
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/20/2021  10:09 AM               508 main.go
+               1 File(s)            508 bytes
+               2 Dir(s)   8,417,071,104 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+func main() {
+        var speed int
+        speed = 50 // OK
+
+        var running bool
+        running = true // OK
+
+        var force float64
+        speed = int(force)
+
+        _, _, _ = speed, running, force
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02>go run main.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02>echo "Use print and its verbs to print out each variable"
+"Use print and its verbs to print out each variable"
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02>go run main.go
+speed = 0, running = true, force = 0
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02> type main.go
+// Copyright © 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+	var speed int
+	speed = 50 // OK
+
+	var running bool
+	running = true // OK
+
+	var force float64
+	speed = int(force)
+
+	_, _, _ = speed, running, force
+
+	fmt.Printf("speed = %d, running = %t, force = %g", speed, running, force)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02> echo "Now let's assign force a float64 value"
+Now let's assign force a float64 value
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02> type main.go
+// Copyright © 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+	var speed int
+	speed = 50 // OK
+
+	var running bool
+	running = true // OK
+
+	var force float64
+	force = 3.14159
+	speed = int(force)
+
+	_, _, _ = speed, running, force
+
+	fmt.Printf("speed = %d, running = %t, force = %g", speed, running, force)
+}
+
+
+(Run Without Debugging In Visual Studio Code)
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:50598 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\02
+DAP server listening at: 127.0.0.1:50598
+speed = 3, running = true, force = 3.14159
+Process 8272 has exited with status 0
+dlv dap (11144) exited with code: 0
+

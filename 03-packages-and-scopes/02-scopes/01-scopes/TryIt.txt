@@ -1,0 +1,128 @@
+ C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/20/2021  10:09 AM    <DIR>          01-scopes
+11/20/2021  10:09 AM    <DIR>          02-block-scope
+11/20/2021  10:09 AM    <DIR>          03-nested-scope
+11/20/2021  10:09 AM    <DIR>          04-package-scope
+               0 File(s)              0 bytes
+               6 Dir(s)   9,264,504,832 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes>cd 01-scopes
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/20/2021  10:09 AM               566 main.go
+               1 File(s)            566 bytes
+               2 Dir(s)   9,264,504,832 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+// file scope
+import "fmt"
+
+// package scope
+const ok = true
+
+// package scope
+func main() { // block scope starts
+
+        var hello = "Hello"
+
+        // hello and ok are visible here
+        fmt.Println(hello, ok)
+
+} // block scope ends
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes>go run main.go
+Hello true
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes>mkdir TryIt
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes>cd TryIt
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes\TryIt>copy ..\main.go .
+        1 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes\TryIt>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+// file scope
+import "fmt"
+
+// package scope
+const ok = true
+
+// package scope
+func main() { // block scope starts
+
+        var hello = "Hello"
+
+        // hello and ok are visible here
+        fmt.Println(hello, ok)
+
+} // block scope ends
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes\TryIt>notepad main.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes\TryIt>cd ..
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes
+
+12/14/2021  08:31 PM    <DIR>          .
+12/14/2021  08:31 PM    <DIR>          ..
+11/20/2021  10:09 AM               566 main.go
+12/14/2021  08:31 PM    <DIR>          TryIt
+               1 File(s)            566 bytes
+               3 Dir(s)   9,258,409,984 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\01-scopes>cd ..
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+12/14/2021  08:31 PM    <DIR>          01-scopes
+11/20/2021  10:09 AM    <DIR>          02-block-scope
+11/20/2021  10:09 AM    <DIR>          03-nested-scope
+11/20/2021  10:09 AM    <DIR>          04-package-scope
+               0 File(s)              0 bytes
+               6 Dir(s)   9,258,409,984 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes>

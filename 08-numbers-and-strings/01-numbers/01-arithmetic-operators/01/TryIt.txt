@@ -1,0 +1,24 @@
+
+	// when an integer and a float value used together
+	// in an expression, the result always becomes
+	// a float value
+	fmt.Println(8 * -4.0) // -32.0 not -32
+
+Although it says that it results in -32.0 visually it does not in VS Code and Go Playground:
+
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:55778 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\08-numbers-and-strings\01-numbers\01-arithmetic-operators\01
+-32 <*****************
+-2
+1
+3.5
+-1
+2
+2
+Process 844 has exited with status 0
+dlv dap (3824) exited with code: 0
+
+However, in Go Playground I tests using type verb %T and it is float64...
+
+fmt.Printf("%T", 8*-4.0) <********* yields float64
+
+https://go.dev/play/p/1oaiClnKFU2

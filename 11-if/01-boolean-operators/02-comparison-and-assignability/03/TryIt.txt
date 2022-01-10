@@ -1,0 +1,174 @@
+// Copyright © 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	speed := 100 // #1
+	// speed := 10 // #2
+
+	fast := speed >= 80
+	slow := speed < 20
+
+	fmt.Printf("going fast? %t\n", fast)
+	fmt.Printf("going slow? %t\n", slow)
+
+	fmt.Printf("is it 100 mph? %t\n", speed == 100)
+	fmt.Printf("is it not 100 mph? %t\n", speed != 100)
+
+	fmt.Println(strings.Repeat("-", 25))
+
+	// -------------------------
+	// #3
+	speedB := 150.5
+	faster := speedB > 100 // ok: untyped
+
+	fmt.Println("is the other car going faster?", faster)
+
+	// ERROR: Type Mismatch
+	// faster = speedB > speed
+	faster = speedB > float64(speed)
+	fmt.Println("is the other car going faster?", faster)
+
+	// #4
+	// ERROR:
+	// only numeric values are comparable with
+	// ordering operators: <, <=, >, >=
+
+	// fmt.Println(true > faster)
+}
+
+
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:50621 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\03
+DAP server listening at: 127.0.0.1:50621
+going fast? true
+going slow? false
+is it 100 mph? true
+is it not 100 mph? false
+-------------------------
+is the other car going faster? true
+is the other car going faster? true
+Process 8012 has exited with status 0
+dlv dap (18300) exited with code: 0
+
+Change #1 and #2 - replace speed = 100 with 10...
+
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:55281 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\03
+DAP server listening at: 127.0.0.1:55281
+going fast? false                        <***** swapped when speed changed from 100 to 10
+going slow? true                         <***** swapped when speed changed from 100 to 10
+is it 100 mph? false                     <***** swapped when speed changed from 100 to 10
+is it not 100 mph? true                  <***** swapped when speed changed from 100 to 10
+-------------------------
+is the other car going faster? true
+is the other car going faster? true
+Process 18072 has exited with status 0
+dlv dap (13020) exited with code: 0
+
+Change #3 - If I replace the untyped value with a typed variable where the value is a float then we'll have an error running/compiling
+	// faster := speedB > 100 // ok: untyped
+	faster := speedB > speed // will Error! typed
+
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:55407 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\03
+DAP server listening at: 127.0.0.1:55407
+Build Error: go build -o C:\Users\mark_\AppData\Local\Temp\__debug_bin229489953.exe -gcflags all=-N -l .
+# github.com/inancgumus/learngo/11-if/01-boolean-operators/02-comparison-and-assignability/03
+.\main.go:35:19: invalid operation: speedB > speed (mismatched types float64 and int) (exit status 2)
+
+The correct way to do it was already in the original code:
+
+	// ERROR: Type Mismatch
+	// faster = speedB > speed
+	faster = speedB > float64(speed)
+	fmt.Println("is the other car going faster?", faster)
+
+Change #4 - basically uncomment the bad section of code 
+
+	// #4
+	// ERROR:
+	// only numeric values are comparable with
+	// ordering operators: <, <=, >, >=
+
+	// fmt.Println(true > faster)
+    fmt.Println(true > faster)
+
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:55484 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\03
+DAP server listening at: 127.0.0.1:55484
+Build Error: go build -o C:\Users\mark_\AppData\Local\Temp\__debug_bin749088463.exe -gcflags all=-N -l .
+# github.com/inancgumus/learngo/11-if/01-boolean-operators/02-comparison-and-assignability/03
+.\main.go:50:19: invalid operation: true > faster (operator > not defined on bool) (exit status 2)
+
+Restore code back to normal...
+
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:53292 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\02-comparison-and-assignability\03
+DAP server listening at: 127.0.0.1:53292
+going fast? true
+going slow? false
+is it 100 mph? true
+is it not 100 mph? false
+-------------------------
+is the other car going faster? true
+is the other car going faster? true
+Process 3428 has exited with status 0
+dlv dap (18076) exited with code: 0
+
+// Copyright © 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	speed := 100 // #1
+	// speed := 10 // #2
+
+	fast := speed >= 80
+	slow := speed < 20
+
+	fmt.Printf("going fast? %t\n", fast)
+	fmt.Printf("going slow? %t\n", slow)
+
+	fmt.Printf("is it 100 mph? %t\n", speed == 100)
+	fmt.Printf("is it not 100 mph? %t\n", speed != 100)
+
+	fmt.Println(strings.Repeat("-", 25))
+
+	// -------------------------
+	// #3
+	speedB := 150.5
+	faster := speedB > 100 // ok: untyped
+	// faster := speedB > speed // will Error! typed
+
+	fmt.Println("is the other car going faster?", faster)
+
+	// ERROR: Type Mismatch
+	// faster = speedB > speed
+	faster = speedB > float64(speed)
+	fmt.Println("is the other car going faster?", faster)
+
+	// #4
+	// ERROR:
+	// only numeric values are comparable with
+	// ordering operators: <, <=, >, >=
+
+	// fmt.Println(true > faster)
+}

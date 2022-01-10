@@ -1,0 +1,26 @@
+Starting: C:\Program Files\go\bin\dlv-dap.exe dap --check-go-version=false --listen=127.0.0.1:54382 from c:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\08-numbers-and-strings\01-numbers\01-arithmetic-operators\03-float-inaccuracy\02
+DAP server listening at: 127.0.0.1:54382
+1
+Process 8852 has exited with status 0
+dlv dap (13180) exited with code: 0
+
+
+https://go.dev/play/p/cKtuiRxqZKb
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	ratio := 3 / 2
+	ratioFloat := float64(3 / 2)
+	ratioFloatDiv := 3.0 / 2.0
+	ratioFloatIntDiv := 3 / 2.0
+
+	fmt.Printf("%d\n", ratio)
+	fmt.Printf("%f\n", float64(ratio))
+	fmt.Printf("%f\n", ratioFloat)
+	fmt.Printf("%f\n", ratioFloatDiv)
+	fmt.Printf("%f\n", ratioFloatIntDiv)
+}

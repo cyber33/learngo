@@ -1,0 +1,13 @@
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\x-tba\foundations\01-print-args> go run main.go Frank Nancy Humpty BadWolf Lando      
+There are 5 people !
+Hello great Frank !
+Hello great Nancy !
+Hello great Humpty !
+Hello great BadWolf !
+Hello great Lando !
+Nice to meet you all.
+c:\program files\duper super\fun.txt
+c:\program files\really\funny.png
+PS C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\x-tba\foundations\01-print-args> 
+
+example of taking in args and raw text with grave' accent (backtick backquote)

@@ -1,0 +1,22 @@
+Uncomment the code that was commented and runs but let's you know something is up where the verbs are not optimal...
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\x-tba\foundations\01-print-args\01-printf\TryIt>go run main.go
+Planet: venus
+Distance: 532 millions kms
+Orbital Period: 22570.1 days
+Does venus have life? false
+venus is 532 away. Think! 532 kms! venus OMG.
+Planet: %!d(string=venus)                          <********
+Distance: %!s(int=532) millions kms                <********
+Orbital Period: %!t(float64=22570.1) days          <********
+Does venus has life? %!f(bool=false)               <********
+Planet: venus
+Distance: 532 millions kms
+Orbital Period: 22570.100000 days
+Does venus has life? false
+Orbital Period: 22570.100000 days                 See the difference with formatting
+Orbital Period: 22570 days
+Orbital Period: 22570.1 days
+Orbital Period: 22570.10 days
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\x-tba\foundations\01-print-args\01-printf\TryIt>

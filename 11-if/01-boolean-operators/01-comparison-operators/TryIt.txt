@@ -1,0 +1,76 @@
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\01-comparison-operators>go run main.go
+fast's type is bool
+going fast? true
+going slow? false
+is it 100 mph? true
+is it not 100 mph? false
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\01-comparison-operators>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        speed := 100 // #1
+        // speed := 10 // #2
+
+        fast := speed >= 80
+        slow := speed < 20
+
+        fmt.Printf("fast's type is %T\n", fast)
+
+        fmt.Printf("going fast? %t\n", fast)
+        fmt.Printf("going slow? %t\n", slow)
+
+        fmt.Printf("is it 100 mph? %t\n", speed == 100)
+        fmt.Printf("is it not 100 mph? %t\n", speed != 100)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\01-comparison-operators>echo "Now make speed := 10"
+"Now make speed := 10"
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\01-comparison-operators>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        // speed := 100 // #1
+        speed := 10 // #2
+
+        fast := speed >= 80
+        slow := speed < 20
+
+        fmt.Printf("fast's type is %T\n", fast)
+
+        fmt.Printf("going fast? %t\n", fast)
+        fmt.Printf("going slow? %t\n", slow)
+
+        fmt.Printf("is it 100 mph? %t\n", speed == 100)
+        fmt.Printf("is it not 100 mph? %t\n", speed != 100)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\01-comparison-operators>go run main.go
+fast's type is bool
+going fast? false
+going slow? true
+is it 100 mph? false
+is it not 100 mph? true
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\11-if\01-boolean-operators\01-comparison-operators>
