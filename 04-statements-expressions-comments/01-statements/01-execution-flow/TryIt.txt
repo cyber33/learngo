@@ -29,7 +29,6 @@ func main() {
 marky@marky-MS-7B24:~/Data/learngo/04-statements-expressions-comments/01-statements/01-execution-flow$ 
 
 arky@marky-MS-7B24:~/Data/learngo/04-statements-expressions-comments/01-statements/01-execution-flow$ vi main.go 
-marky@marky-MS-7B24:~/Data/learngo/04-statements-expressions-comments/01-statements/01-execution-flow$ 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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marky@marky-MS-7B24:~/Data/learngo/04-statements-expressions-comments/01-statements/01-execution-flow$ vi main.go ^C
 marky@marky-MS-7B24:~/Data/learngo/04-statements-expressions-comments/01-statements/01-execution-flow$ go run main.go 
 Hello!
 bigger
