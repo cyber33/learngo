@@ -1,0 +1,33 @@
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/02-declarations/01-declaration-syntax/01-syntax
+$ ~/go/bin/go run main.go
+0
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/02-declarations/01-declaration-syntax/01-syntax
+$ type main.go
+main.go is ./main.go
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/02-declarations/01-declaration-syntax/01-syntax
+$ cat main.go
+// Copyright © 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        var speed int
+
+        fmt.Println(speed)
+}
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/02-declarations/01-declaration-syntax/01-syntax
+$ vi TryIt.txt
+
+
+So the variable speed is defined as an int but not initialized by the program so, if I remember correctly get initiazed to 0 if not initialized...
