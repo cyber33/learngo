@@ -1,0 +1,39 @@
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/01-basic-data-types/exercises/01-print-the-literals
+$ cd solution/
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/01-basic-data-types/exercises/01-print-the-literals/solution
+$ ls
+main.go
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/01-basic-data-types/exercises/01-print-the-literals/solution
+$ ~/go/bin/go run main.go
+42 8500 344433 -2323
+3.14 6.28 -42
+true false
+Hi! I'm Inanc!
+Merhaba, adım İnanç!
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/01-basic-data-types/exercises/01-print-the-literals/solution
+$ cat main.go
+// Copyright © 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        fmt.Println(42, 8500, 344433, -2323)
+        fmt.Println(3.14, 6.28, -42.)
+        fmt.Println(true, false)
+        fmt.Println("Hi! I'm Inanc!")
+        fmt.Println("Merhaba, adım İnanç!")
+}
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/06-variables/01-basic-data-types/exercises/01-print-the-literals/solution
+$ 
