@@ -1,0 +1,81 @@
+C:\Users\mark_\Data\Google\Interview Prep\Golang>git clone https://github.com/cyber33/learngo
+Cloning into 'learngo'...
+remote: Enumerating objects: 8387, done.
+remote: Counting objects: 100% (164/164), done.
+remote: Compressing objects: 100% (101/101), done.
+remote: Total 8387 (delta 64), reused 98 (delta 54), pack-reused 8223
+Receiving objects: 100% (8387/8387), 3.22 MiB | 7.13 MiB/s, done.
+Resolving deltas: 100% (3694/3694), done.
+Updating files: 100% (1318/1318), done.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/01/2021  10:31 AM            15,872 Headfirst Go.doc
+11/01/2021  10:30 AM            22,848 Headfirst Go.odt
+11/20/2021  10:09 AM    <DIR>          learngo
+               2 File(s)         38,720 bytes
+               3 Dir(s)   7,581,507,584 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang>cd learngo
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/20/2021  10:09 AM               231 .gitignore
+11/20/2021  10:09 AM    <DIR>          01-get-started
+11/20/2021  10:09 AM    <DIR>          02-write-your-first-program
+11/20/2021  10:09 AM    <DIR>          03-packages-and-scopes
+11/20/2021  10:09 AM    <DIR>          04-statements-expressions-comments
+11/20/2021  10:09 AM    <DIR>          05-write-your-first-library-package
+11/20/2021  10:09 AM    <DIR>          06-variables
+11/20/2021  10:09 AM    <DIR>          07-printf
+11/20/2021  10:09 AM    <DIR>          08-numbers-and-strings
+11/20/2021  10:09 AM    <DIR>          09-go-type-system
+11/20/2021  10:09 AM    <DIR>          10-constants
+11/20/2021  10:09 AM    <DIR>          11-if
+11/20/2021  10:09 AM    <DIR>          12-switch
+11/20/2021  10:09 AM    <DIR>          13-loops
+11/20/2021  10:09 AM    <DIR>          14-arrays
+11/20/2021  10:09 AM    <DIR>          15-project-retro-led-clock
+11/20/2021  10:09 AM    <DIR>          16-slices
+11/20/2021  10:09 AM    <DIR>          17-project-empty-file-finder
+11/20/2021  10:09 AM    <DIR>          18-project-bouncing-ball
+11/20/2021  10:09 AM    <DIR>          19-strings-runes-bytes
+11/20/2021  10:09 AM    <DIR>          20-project-spam-masker
+11/20/2021  10:09 AM    <DIR>          21-project-text-wrapper
+11/20/2021  10:09 AM    <DIR>          22-maps
+11/20/2021  10:09 AM    <DIR>          23-input-scanning
+11/20/2021  10:09 AM    <DIR>          24-structs
+11/20/2021  10:09 AM    <DIR>          25-functions
+11/20/2021  10:09 AM    <DIR>          26-pointers
+11/20/2021  10:09 AM    <DIR>          advfuncs
+11/20/2021  10:09 AM    <DIR>          assets
+11/20/2021  10:09 AM    <DIR>          concurrency
+11/20/2021  10:09 AM    <DIR>          etc
+11/20/2021  10:09 AM    <DIR>          first
+11/20/2021  10:09 AM               423 go.mod
+11/20/2021  10:09 AM             2,696 go.sum
+11/20/2021  10:09 AM    <DIR>          interfaces
+11/20/2021  10:09 AM            22,053 LICENSE
+11/20/2021  10:09 AM    <DIR>          logparser
+11/20/2021  10:09 AM    <DIR>          magic
+11/20/2021  10:09 AM    <DIR>          magicpanic
+11/20/2021  10:09 AM               395 main.go
+11/20/2021  10:09 AM             2,082 README.md
+11/20/2021  10:09 AM    <DIR>          translation
+11/20/2021  10:09 AM    <DIR>          x-tba
+               6 File(s)         27,880 bytes
+              39 Dir(s)   7,580,086,272 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo>
