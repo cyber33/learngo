@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 func main() {
 	var speed int
 	speed = 50 // OK
@@ -19,4 +21,6 @@ func main() {
 	speed = int(force)
 
 	_, _, _ = speed, running, force
+	
+	fmt.Printf("speed = %d, running = %t, force = %g", speed, running, force)
 }
