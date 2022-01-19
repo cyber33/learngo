@@ -1,0 +1,35 @@
+package main
+
+
+import (
+        "fmt"
+)
+
+func main() {
+        fmt.Println("Hi Babes ... love you much!")
+}
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/02-write-your-first-program/exercises/TryIt
+$ GOOS=linux  ~/go/bin/go build -o hiLauraLinux hiLaura.go
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/02-write-your-first-program/exercises/TryIt
+$ file hiLauraLinux
+hiLauraLinux: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, Go BuildID=pX0wl_RgXayzLff9S6rF/-E0OQTRIvZZrL14qn0CN/-dSLyEwde0dZjNceGta4/Be_K966BhM-FAOSiEYA1, not stripped
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/02-write-your-first-program/exercises/TryIt
+$ GOOS=darwin  ~/go/bin/go build -o hiLauraMacOS hiLaura.go
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/02-write-your-first-program/exercises/TryIt
+$ file hiLauraMacOS
+hiLauraMacOS: Mach-O 64-bit x86_64 executable
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/02-write-your-first-program/exercises/TryIt
+$ GOOS=windows  ~/go/bin/go build -o hiLauraWin hiLaura.go
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/02-write-your-first-program/exercises/TryIt
+$ file hiLauraWin
+hiLauraWin: PE32+ executable (console) x86-64 (stripped to external PDB), for MS Windows
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/02-write-your-first-program/exercises/TryIt
+$
+
