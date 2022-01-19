@@ -1,0 +1,118 @@
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$ cat main.go
+// Copyright © 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        fmt.Println("Hello!")
+
+        // two files belong to the same package
+        // calling `bye()` of bye.go here
+        bye()
+}
+
+// EXERCISE: Remove the comments from the below function
+//           And analyze the error message
+
+// func bye() {
+//      fmt.Println("Bye!")
+// }
+
+// ***** EXPLANATION *****
+//
+// ERROR: "bye" function "redeclared"
+//        in "this block"
+//
+// "this block" means = "main package"
+//
+// "redeclared" means = you're using the same name
+//   in the same scope again
+//
+// main package's scope is:
+// all source-code files which are in the same main package
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$ ~/go/bin/go run main.go
+# command-line-arguments
+.\main.go:18:2: undefined: bye
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$ vi main.go
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$ vi main.go
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$ cat main.go
+// Copyright © 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        fmt.Println("Hello!")
+
+        // two files belong to the same package
+        // calling `bye()` of bye.go here
+        bye()
+}
+
+// EXERCISE: Remove the comments from the below function
+//           And analyze the error message
+
+func bye() {
+        fmt.Println("Bye!")
+}
+
+// ***** EXPLANATION *****
+//
+// ERROR: "bye" function "redeclared"
+//        in "this block"
+//
+// "this block" means = "main package"
+//
+// "redeclared" means = you're using the same name
+//   in the same scope again
+//
+// main package's scope is:
+// all source-code files which are in the same main package
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$ ~/go/bin/go run main.go
+Hello!
+Bye!
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$ ~/go/bin/go run
+go run: no go files listed
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$
+
+When we compile run all files the bye.go file defines bye so the local bye function becomes a redeclaration of the function...
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$ ~/go/bin/go run *.go
+# command-line-arguments
+.\main.go:24:6: bye redeclared in this block
+        C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\04-package-scope\bye.go:13:6: previous declaration
+
+mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
+$
+
