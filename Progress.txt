@@ -1,5 +1,5 @@
-All codes where I created a solution or experimented with is where I added a TryIt\ directory which can have a 
-modification to what was given as a solution\ or by default to extend learning
+All codes where I created a solution or experimented with is where I added a TryIt\ directory which can have a
+modification to what was given as a solution\ or by default to extend learning (or just a TryIt.go program)
 
 Here is our progress...
 
@@ -1456,7 +1456,7 @@ C:.
 |           questions.md
 |
 +---13-loops
-|   +---01-basics
+|   +---01-basics     <***** in progress
 |   |       main.go
 |   |
 |   +---02-break

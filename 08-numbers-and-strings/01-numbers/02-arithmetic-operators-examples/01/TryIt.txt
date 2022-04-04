@@ -1,0 +1,12 @@
+sum : 5.5
+dif : 2
+dif : 2.5
+prod: 20
+prod: 12.5
+quot: 4
+quot: 5.333333333333333
+rem : 2
+rem : 2
+Process 8860 has exited with status 0
+dlv dap (14616) exited with code: 0
+

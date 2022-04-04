@@ -116,3 +116,16 @@ $ ~/go/bin/go run *.go
 mark_@LAPTOP-3D73FF3E /cygdrive/c/Users/mark_/Data/Google/Interview Prep/Golang/learngo/03-packages-and-scopes/02-scopes/04-package-scope
 $
 
+This is why...
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\04-package-scope>find "func bye" *.go
+
+---------- BYE.GO
+func bye() {
+
+---------- HEY.GO
+
+---------- MAIN.GO
+func bye() {
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\03-packages-and-scopes\02-scopes\04-package-scope>
