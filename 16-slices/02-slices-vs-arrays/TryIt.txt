@@ -1,0 +1,273 @@
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices>cd 02-slices-vs-arrays
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/20/2021  10:09 AM               967 main.go
+               1 File(s)            967 bytes
+               2 Dir(s)  18,731,024,384 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        var array [2]int
+
+        // zero value of an array is zero-valued elements
+        fmt.Printf("array       : %#v\n", array)
+
+        // nope: arrays are fixed length
+        // array[2] = 0
+
+        var slice []int
+
+        // zero value of a slice is nil
+        fmt.Println("slice == nil?", slice == nil)
+
+        // nope: they don't exist:
+        // _ = slice[0]
+        // _ = slice[1]
+
+        // len function still works though
+        fmt.Println("len(slice)  :", len(slice))
+
+        // array's length is part of its type
+        fmt.Printf("array's type: %T\n", array)
+
+        // whereas, slice's length isn't part of its type
+        fmt.Printf("slice's type: %T\n", slice)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>go run main.go
+array       : [2]int{0, 0}
+slice == nil? true
+len(slice)  : 0
+array's type: [2]int
+slice's type: []int
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>copy main.go tryit1.go
+        1 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>notepad tryit1.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>go run tryit1.go
+# command-line-arguments
+.\tryit1.go:20:7: invalid array index 2 (out of bounds for 2-element array)
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>type tryit1.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        var array [2]int
+
+        // zero value of an array is zero-valued elements
+        fmt.Printf("array       : %#v\n", array)
+
+        // nope: arrays are fixed length
+        array[2] = 0
+
+        var slice []int
+
+        // zero value of a slice is nil
+        fmt.Println("slice == nil?", slice == nil)
+
+        // nope: they don't exist:
+        // _ = slice[0]
+        // _ = slice[1]
+
+        // len function still works though
+        fmt.Println("len(slice)  :", len(slice))
+
+        // array's length is part of its type
+        fmt.Printf("array's type: %T\n", array)
+
+        // whereas, slice's length isn't part of its type
+        fmt.Printf("slice's type: %T\n", slice)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>copy main.go tryit2.go
+        1 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>notepad tryit2.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>type tryit2.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        var array [2]int
+
+        // zero value of an array is zero-valued elements
+        fmt.Printf("array       : %#v\n", array)
+
+        // nope: arrays are fixed length
+        // array[2] = 0
+
+        var slice []int
+
+        // zero value of a slice is nil
+        fmt.Println("slice == nil?", slice == nil)
+
+        // nope: they don't exist:
+        _ = slice[0]
+        // _ = slice[1]
+
+        // len function still works though
+        fmt.Println("len(slice)  :", len(slice))
+
+        // array's length is part of its type
+        fmt.Printf("array's type: %T\n", array)
+
+        // whereas, slice's length isn't part of its type
+        fmt.Printf("slice's type: %T\n", slice)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>go run tryit2.go
+array       : [2]int{0, 0}
+slice == nil? true
+panic: runtime error: index out of range [0] with length 0
+
+goroutine 1 [running]:
+main.main()
+        C:/Users/mark_/Data/Google/Interview Prep/Golang/learngo/16-slices/02-slices-vs-arrays/tryit2.go:28 +0xdd
+exit status 2
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>copy main.go tryit3.go
+        1 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>notepad tryit3.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>go run tryit3.go
+array       : [2]int{0, 0}
+slice == nil? true
+panic: runtime error: index out of range [1] with length 0
+
+goroutine 1 [running]:
+main.main()
+        C:/Users/mark_/Data/Google/Interview Prep/Golang/learngo/16-slices/02-slices-vs-arrays/tryit3.go:29 +0xdf
+exit status 2
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>type tryit3.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        var array [2]int
+
+        // zero value of an array is zero-valued elements
+        fmt.Printf("array       : %#v\n", array)
+
+        // nope: arrays are fixed length
+        // array[2] = 0
+
+        var slice []int
+
+        // zero value of a slice is nil
+        fmt.Println("slice == nil?", slice == nil)
+
+        // nope: they don't exist:
+        // _ = slice[0]
+        _ = slice[1]
+
+        // len function still works though
+        fmt.Println("len(slice)  :", len(slice))
+
+        // array's length is part of its type
+        fmt.Printf("array's type: %T\n", array)
+
+        // whereas, slice's length isn't part of its type
+        fmt.Printf("slice's type: %T\n", slice)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>go run main.go
+array       : [2]int{0, 0}
+slice == nil? true
+len(slice)  : 0
+array's type: [2]int
+slice's type: []int
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        var array [2]int
+
+        // zero value of an array is zero-valued elements
+        fmt.Printf("array       : %#v\n", array)
+
+        // nope: arrays are fixed length
+        // array[2] = 0
+
+        var slice []int
+
+        // zero value of a slice is nil
+        fmt.Println("slice == nil?", slice == nil)
+
+        // nope: they don't exist:
+        // _ = slice[0]
+        // _ = slice[1]
+
+        // len function still works though
+        fmt.Println("len(slice)  :", len(slice))
+
+        // array's length is part of its type
+        fmt.Printf("array's type: %T\n", array)
+
+        // whereas, slice's length isn't part of its type
+        fmt.Printf("slice's type: %T\n", slice)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\02-slices-vs-arrays>

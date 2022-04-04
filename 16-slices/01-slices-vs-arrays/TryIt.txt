@@ -1,0 +1,218 @@
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices
+
+11/20/2021  10:09 AM    <DIR>          .
+01/17/2022  04:58 PM    <DIR>          ..
+11/20/2021  10:09 AM    <DIR>          01-slices-vs-arrays
+11/20/2021  10:09 AM    <DIR>          02-slices-vs-arrays
+11/20/2021  10:09 AM    <DIR>          03-slices-vs-arrays-examples
+11/20/2021  10:09 AM    <DIR>          04-slices-vs-arrays-unique-nums
+11/20/2021  10:09 AM    <DIR>          05-append
+11/20/2021  10:09 AM    <DIR>          06-slice-expressions
+11/20/2021  10:09 AM    <DIR>          07-slice-expressions-pagination
+11/20/2021  10:09 AM    <DIR>          08-slice-internals-1-backing-array
+11/20/2021  10:09 AM    <DIR>          09-slice-internals-2-slice-header
+11/20/2021  10:09 AM    <DIR>          10-slice-internals-3-len-cap
+11/20/2021  10:09 AM    <DIR>          11-slice-internals-4-append
+11/20/2021  10:09 AM    <DIR>          12-full-slice-expressions
+11/20/2021  10:09 AM    <DIR>          13-make
+11/20/2021  10:09 AM    <DIR>          14-copy
+11/20/2021  10:09 AM    <DIR>          15-multi-dimensional-slices
+11/20/2021  10:09 AM    <DIR>          exercises
+11/20/2021  10:09 AM    <DIR>          questions
+11/20/2021  10:09 AM               196 README.md
+               1 File(s)            196 bytes
+              19 Dir(s)  18,726,518,784 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices>cd 01-slices-vs-arrays
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>dir
+ Volume in drive C is Acer
+ Volume Serial Number is AE3D-6D4D
+
+ Directory of C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays
+
+11/20/2021  10:09 AM    <DIR>          .
+11/20/2021  10:09 AM    <DIR>          ..
+11/20/2021  10:09 AM               752 main.go
+               1 File(s)            752 bytes
+               2 Dir(s)  18,725,867,520 bytes free
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        {
+                // its length is part of its type
+                var nums [5]int
+                fmt.Printf("nums array: %#v\n", nums)
+        }
+
+        {
+                // its length is not part of its type
+                var nums []int
+                fmt.Printf("nums slice: %#v\n", nums)
+
+                fmt.Printf("len(nums) : %d\n", len(nums))
+
+                // won't work: the slice is nil.
+                // fmt.Printf("nums[0]: %d\n", nums[0])
+                // fmt.Printf("nums[1]: %d\n", nums[1])
+        }
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>go run main.go
+nums array: [5]int{0, 0, 0, 0, 0}
+nums slice: []int(nil)
+len(nums) : 0
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>copy main.go tryit1.go
+        1 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>notepad tryit1.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>go run tryit1.go
+# command-line-arguments
+.\tryit1.go:19:33: syntax error: unexpected len, expecting comma or )
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>go run tryit1.go
+nums array: [5]int{0, 0, 0, 0, 0}
+len(nums) : 5
+nums slice: []int(nil)
+len(nums) : 0
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>type tryit1.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        {
+                // its length is part of its type
+                var nums [5]int
+                fmt.Printf("nums array: %#v\n", nums)
+
+                fmt.Printf("len(nums) : %d\n", len(nums))
+        }
+
+        {
+                // its length is not part of its type
+                var nums []int
+                fmt.Printf("nums slice: %#v\n", nums)
+
+                fmt.Printf("len(nums) : %d\n", len(nums))
+
+                // won't work: the slice is nil.
+                // fmt.Printf("nums[0]: %d\n", nums[0])
+                // fmt.Printf("nums[1]: %d\n", nums[1])
+        }
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>copy tryit1.go tryit2.go
+        1 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>notepad tryit2.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>go run tryit2.go
+nums array: [5]int{0, 0, 0, 0, 0}
+len(nums) : 5
+nums slice: []int(nil)
+len(nums) : 0
+panic: runtime error: index out of range [0] with length 0
+
+goroutine 1 [running]:
+main.main()
+        C:/Users/mark_/Data/Google/Interview Prep/Golang/learngo/16-slices/01-slices-vs-arrays/tryit2.go:30 +0x19a
+exit status 2
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>copy tryit2.go tryit3.go
+        1 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>notepad tryit3.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>go run tryit3.go
+nums array: [5]int{0, 0, 0, 0, 0}
+len(nums) : 5
+nums slice: []int(nil)
+len(nums) : 0
+panic: runtime error: index out of range [1] with length 0
+
+goroutine 1 [running]:
+main.main()
+        C:/Users/mark_/Data/Google/Interview Prep/Golang/learngo/16-slices/01-slices-vs-arrays/tryit3.go:31 +0x19c
+exit status 2
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>copy tryit3.go tryit4.go
+        1 file(s) copied.
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>notepad tryit4.go
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>go run tryit4.go
+nums array: [5]int{0, 0, 0, 0, 0}
+len(nums) : 5
+nums slice: []int(nil)
+len(nums) : 0
+panic: runtime error: index out of range [0] with length 0
+
+goroutine 1 [running]:
+main.main()
+        C:/Users/mark_/Data/Google/Interview Prep/Golang/learngo/16-slices/01-slices-vs-arrays/tryit4.go:30 +0x19a
+exit status 2
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>type tryit4.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import "fmt"
+
+func main() {
+        {
+                // its length is part of its type
+                var nums [5]int
+                fmt.Printf("nums array: %#v\n", nums)
+
+                fmt.Printf("len(nums) : %d\n", len(nums))
+        }
+
+        {
+                // its length is not part of its type
+                var nums []int
+                fmt.Printf("nums slice: %#v\n", nums)
+
+                fmt.Printf("len(nums) : %d\n", len(nums))
+
+                // won't work: the slice is nil.
+                fmt.Printf("nums[0]: %d\n", nums[0])
+                fmt.Printf("nums[1]: %d\n", nums[1])
+        }
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\16-slices\01-slices-vs-arrays>
