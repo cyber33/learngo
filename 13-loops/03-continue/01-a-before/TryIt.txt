@@ -1,0 +1,52 @@
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-a-before>time /t
+10:48 AM
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-a-before>go run main.go
+exit status 0xc000013a
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-a-before>time /t
+10:50 AM
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-a-before>type main.go
+// Copyright ┬⌐ 2018 Inanc Gumus
+// Learn Go Programming Course
+// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+//
+// For more tutorials  : https://learngoprogramming.com
+// In-person training  : https://www.linkedin.com/in/inancgumus/
+// Follow me on twitter: https://twitter.com/inancgumus
+
+package main
+
+import (
+        "fmt"
+)
+
+func main() {
+        var (
+                sum int
+                i   = 1
+        )
+
+        for {
+                if i > 10 {
+                        break
+                }
+
+                if i%2 != 0 {
+                        // this continue creates an endless loop
+                        // since the code never increases the i
+                        continue
+                }
+
+                sum += i
+
+                fmt.Println(i, "-->", sum)
+
+                i++
+        }
+
+        fmt.Println(sum)
+}
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-a-before>

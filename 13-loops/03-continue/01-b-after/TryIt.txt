@@ -1,0 +1,15 @@
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-b-after>time /t
+10:52 AM
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-b-after>go run main.go
+2 --> 2
+4 --> 6
+6 --> 12
+8 --> 20
+10 --> 30
+30
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-b-after>time /t
+10:52 AM
+
+C:\Users\mark_\Data\Google\Interview Prep\Golang\learngo\13-loops\03-continue\01-b-after>
