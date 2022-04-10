@@ -1,3 +1,5 @@
+demo of: go doc -src fmt Println
+
 Welcome to Cloud Shell! Type "help" to get started.To set your Cloud Platform project in this session use "gcloud config set project [PROJECT_ID]
 
 "mark_yoshikawa@cloudshell:~$  go doc -src fmt Println
