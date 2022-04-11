@@ -1,0 +1,26 @@
+package main
+
+import "fmt"
+
+/*
+
+This program illustrates functions can be
+defined before or after its used in the same
+package
+
+*/
+
+func sayHello() {
+	fmt.Println("Hello!")
+}
+
+func main() {
+	sayHello()
+	sayGoodby()
+}
+
+func sayGoodby() {
+	fmt.Println("Goodby!")
+}
+	
+// https://go.dev/play/p/ZL90yInl7BX

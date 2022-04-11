@@ -6,6 +6,9 @@
 // In-person training  : https://www.linkedin.com/in/inancgumus/
 // Follow me on twitter: https://twitter.com/inancgumus
 
+// https://go.dev/play/p/jR40L5lq3Rj
+
+
 package main
 
 import "fmt"

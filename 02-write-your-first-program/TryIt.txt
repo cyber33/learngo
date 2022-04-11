@@ -1,0 +1,19 @@
+demo of: go doc -src fmt Println
+
+Welcome to Cloud Shell! Type "help" to get started.To set your Cloud Platform project in this session use "gcloud config set project [PROJECT_ID]
+
+"mark_yoshikawa@cloudshell:~$  go doc -src fmt Println
+
+package fmt 
+
+// import "fmt"
+// Println formats using the default formats for its operands and writes to standard output.
+// Spaces are always added between operands and a newline is appended.
+// It returns the number of bytes written and any write error encountered.
+
+func Println(a ...any) (n int, err error) {        
+        return Fprintln(os.Stdout, a...)
+}
+mark_yoshikawa@cloudshell:~$ 
+
+
